@@ -1,10 +1,10 @@
 <div class="entry-header">
   <div class="header-menu header-menu-top">
     <ul>
-      <li class="header-item-title"><a href="{{site.url}}{{menu.url}}"><h2> {{ site.title }}</h2></a></li>
+      <li class="header-item-title"><a href="{{site.url}}/"><h2> {{ site.title }}</h2></a></li>
       {% for menu in site.menu reversed %}
         {% assign class = nil %}
-        {% if page.url contains menu.url %}
+        {% if ((page.url contains menu.url and menu.url != '/') or (page.url == '/index.html' and menu.url == '/')) %}
           {% assign class = 'active' %}
         {% endif %}
 
@@ -12,7 +12,7 @@
           <li class="header-item {{class}}"><a href="{{site.url}}{{menu.url}}"><h3>{{ menu.title }}</h3></a>
             <ul class="header-submenu">
               {% for sub in menu.submenu %}
-                <li class="sub-item"><a href="{{site.url}}{{menu.url}}{{sub.url}}">{{sub.title}}</a></li>
+                <li class="sub-item"><a href="{{site.url}}{{sub.url}}">{{sub.title}}</a></li>
               {% endfor %}
             </ul>
           </li>
@@ -26,6 +26,17 @@
   <div class="header-title">
     <div class="header-title-wrap">
       <h1>{{ page.title }}</h1>
+      {% if page.date %}
+        <h2><span class="entry-date date published"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></span></h2>
+      {% endif %}
+
+      {% if site.reading_time and page.layout == 'post' %}
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          {% assign readtime = content | number_of_words | divided_by:site.words_per_minute %}
+          Reading time ~{% if readtime <= 1 %}1 minute{% else %}{{ readtime }} minutes{% endif %}
+        </p><!-- /.entry-reading-time -->
+      {% endif %}
     </div><!-- /.header-title-wrap -->
   </div><!-- /.header-title -->
 </div><!-- /.entry-header -->

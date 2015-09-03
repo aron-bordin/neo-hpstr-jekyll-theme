@@ -7,34 +7,13 @@
 {% include head.html %}
 </head>
 
-<body id="page" {% if page.image.feature %}class="feature"{% endif %}>
+<body id="page">
 
 {% include browser-upgrade.html %}
 {% include header.html %}
 
-{% if page.image.feature %}
-<div class="entry-header">
-  {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
-  <div class="entry-image">
-    <img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}">
-  </div><!-- /.entry-image -->
-</div><!-- /.entry-header -->
-{% endif %}
-
 <div id="main" role="main">
   <article class="hentry">
-    <header class="header-title">
-      <div class="header-title-wrap">
-        <h1 class="entry-title">{{ page.title }}</h1>
-        {% if site.reading_time %}
-        <p class="entry-reading-time">
-          <i class="fa fa-clock-o"></i>
-          {% assign readtime = content | number_of_words | divided_by:site.words_per_minute %}
-          Reading time ~{% if readtime <= 1 %}1 minute{% else %}{{ readtime }} minutes{% endif %}
-        </p><!-- /.entry-reading-time -->
-        {% endif %}
-      </div><!-- /.header-title-wrap -->
-    </header>
     <div class="entry-content">
       {{ content }}
       <footer class="entry-meta">

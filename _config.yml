@@ -1,4 +1,4 @@
-title:            Site Title
+title:            Blog Title
 description:      Describe your website here.
 disqus_shortname: hpstrtheme
 reading_time:     true
@@ -14,11 +14,13 @@ menu:
     url: '/about'
   - title: 'Tags'
     url: '/tags'
+  - title: 'Favorites'
+    url: '#'
     submenu:
-      - title: 'Tag 1'
-        url: '/tag/1'
-      - title: 'Tag 2'
-        url: '/tag/2'
+      - title: 'highlighter'
+        url: '/code-highlighting-post/'
+      - title: 'intro'
+        url: '/readability-post/'
 
 # Owner/author information
 owner:
