@@ -102,6 +102,14 @@ body {
 	color: $white;
 }
 
+.header-menu-top .sub-item{
+	background-color: $menu-top;
+}
+
+.header-menu-overflow .sub-item{
+	background-color: $menu-overflow;
+}
+
 .header-item,
 .header-item-title {
 	float: right;
@@ -110,7 +118,7 @@ body {
 	border-top-color: transparent;
   border-top-style: solid;
   border-top-width: 5px;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 .header-item-title{
@@ -120,7 +128,41 @@ body {
 
 .header-item.active,
 .header-item:hover{
-  border-top-color: #F45145;
+  border-top-color: $header-margin;
+}
+
+.header-item .header-submenu{
+	display: none;
+}
+
+.header-item:hover .header-submenu{
+	display: block;
+	position: absolute;
+}
+
+.header-submenu {
+	border-top: 2px solid $header-margin;
+	width: 200px;
+	z-index: 1000000;
+	list-style-type: none;
+}
+
+.sub-item {
+	position: relative;
+	padding-left: 10px;
+	width: 100%;
+	border-bottom: 1px solid gray;
+	height: 50px;
+	text-decoration: none;
+}
+
+.sub-item a{
+	vertical-align: middle;
+  display: table-cell;
+  height: 50px;
+}
+.sub-item:hover {
+	border-bottom-color: $header-margin;
 }
 
 // Feature Image Caption
