@@ -1,0 +1,25 @@
+<div class="entry-header">
+  <div class="header-menu header-menu-top">
+    <ul>
+      <li class="header-item-title"><a href="{{site.url}}{{menu.url}}"><h2> {{ site.title }}</h2></a></li>
+      {% for menu in site.menu reversed %}
+        {% assign class = nil %}
+        {% if page.url contains menu.url %}
+          {% assign class = 'active' %}
+        {% endif %}
+
+        {% if menu.submenu %}
+
+        {% else %}
+          <li class="header-item {{class}}"><a href="{{site.url}}{{menu.url}}"><h3>{{ menu.title }}</h3></a></li>
+        {% endif %}
+      {% endfor %}
+      <li class="header-item"><a href="{{site.url}}/search"><h3><i class="fa fa-search"></i></h3></a></li>
+    </ul>
+  </div>
+  <div class="header-title">
+    <div class="header-title-wrap">
+      <h1>{{ page.title }}</h1>
+    </div><!-- /.header-title-wrap -->
+  </div><!-- /.header-title -->
+</div><!-- /.entry-header -->

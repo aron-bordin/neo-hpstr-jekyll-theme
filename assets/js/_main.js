@@ -42,8 +42,20 @@ $(document).ready(function() {
       tError: '<a href="%url%">Image #%curr%</a> could not be loaded.',
     },
     removalDelay: 300, // Delay in milliseconds before popup is removed
-    // Class that is added to body when popup is open. 
+    // Class that is added to body when popup is open.
     // make it unique to apply your CSS animations just to this exact popup
     mainClass: 'mfp-fade'
+  });
+});
+
+$(document).ready(function(e) {
+  $(window).scroll(function(){
+    var header = $('.header-menu');
+    var scroll = $(window).scrollTop();
+    if(scroll > 300){
+      header.attr('class', 'header-menu header-menu-overflow');
+    } else {
+      header.attr('class', 'header-menu header-menu-top');
+    }
   });
 });

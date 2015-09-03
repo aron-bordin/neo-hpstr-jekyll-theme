@@ -13,18 +13,20 @@ $doc-line-height: 26;
 
 // set-up the body font-size / line-height
 body {
-	margin-top: 0px + $doc-line-height;
-	font-size: 0px + $doc-font-size;	
+	font-size: 0px + $doc-font-size;
 }
 
 
 // Colors
 // --------------------------------------------------
 $base-color				   : rgba(#222,0.8);
+$header-color				 : rgba(#000,0.8);
+$menu-top				 		 : white;
+$menu-overflow			 : #2E2E2E;
 $body-color      		 : #e8e8e8;
 $text-color      		 : rgba(#222,0.8);
-$comp-color 	 		   : complement(#222); 
-$border-color    		 : lighten($base-color,60);
+$comp-color 	 		   : complement(#222);
+$border-color    		 : lighten(#222,60);
 $white           		 : #fff;
 $black           		 : #000;
 $link-color 		     : rgba(#222,0.8);
