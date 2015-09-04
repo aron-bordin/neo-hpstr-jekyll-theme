@@ -24,8 +24,9 @@ menu:
 
 # Owner/author information
 owner:
-  name:           Your Name
-  avatar:         avatar.jpg
+  name:           Your name
+  site:           http://aronbordin.com
+  avatar:         images/avatar.jpg
   bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
   email:          you@email.com
   # Social networking links used in footer. Update and remove as you like.
@@ -40,6 +41,13 @@ owner:
   # google plus id, include the '+', eg +AronBordin
   google_plus:    +yourid
 
+social:
+  - title: "github"
+    url: "https://github.com/aron-bordin"
+  - title: "linkedin"
+    url: "https://br.linkedin.com/in/aronbordin"
+  - title: "youtube"
+    url: "https://www.youtube.com/channel/UCfnSek-9HPWOx5e2pH7VFgg"
 # Background image to be tiled on all pages
 background:
 
