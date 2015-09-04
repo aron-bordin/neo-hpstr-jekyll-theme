@@ -48,6 +48,7 @@ $(document).ready(function() {
   });
 });
 
+// header
 $(document).ready(function(e) {
   $(window).scroll(function(){
     var header = $('.header-menu');
@@ -57,5 +58,30 @@ $(document).ready(function(e) {
     } else {
       header.attr('class', 'header-menu header-menu-top');
     }
+  });
+});
+
+//mobile menu
+$(document).ready(function(){
+  $("#menu").attr('style', '');
+  $("#menu").mmenu({
+    "extensions": [
+      "border-full",
+      "effect-zoom-menu",
+      "effect-zoom-panels",
+      "pageshadow",
+      "theme-dark"
+    ],
+    "counters": true,
+    "navbars": [
+      {
+        "position": "bottom",
+        "content": [
+          "<a class='fa fa-envelope' href='#/'></a>",
+          "<a class='fa fa-twitter' href='#/'></a>",
+          "<a class='fa fa-facebook' href='#/'></a>"
+        ]
+      }
+    ]
   });
 });

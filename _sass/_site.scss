@@ -68,6 +68,13 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
 	background-color: $header-color;
 }
 
+.header-toggle{
+	display: block;
+	@media #{$large} {
+		display: none;
+	}
+}
+
 .header-title {
 	text-align: center;
 	position: absolute;
@@ -152,6 +159,12 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
   box-sizing: border-box;
 }
 
+.header-item{
+	display: none;
+	@media #{$large} {
+		display: block;
+	}
+}
 .header-item-title{
 	float: left;
 	border-top-width: 0px;
