@@ -13,3 +13,16 @@ comments: false
 	<ul id="results-container">
 	</ul>
 </article><!-- /.hentry -->
+
+<script>
+
+  window.onload = function(){
+    new SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '{{site.url}}/search.json',
+      searchResultTemplate: '<li class="entry-title"><a href="{url}" title="{title}">{title}</a></li>'
+    });
+  }
+
+</script>

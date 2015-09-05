@@ -94,10 +94,3 @@ $(document).ready(function(){
     text: "Share with "
   });
 });
-
-new SimpleJekyllSearch({
-  searchInput: document.getElementById('search-input'),
-  resultsContainer: document.getElementById('results-container'),
-  json: '/search.json',
-  searchResultTemplate: '<li class="entry-title"><a href="{url}" title="{title}">{title}</a></li>'
-});
