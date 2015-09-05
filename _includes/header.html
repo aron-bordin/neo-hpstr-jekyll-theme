@@ -1,3 +1,6 @@
+{% capture site_cats %}{% for cat in site.categories %}{{ cat | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign cats_list = site_cats | split:',' | sort %}
+
 <div class="entry-header">
   <div class="header-menu header-menu-top">
     <ul>
@@ -9,7 +12,16 @@
           {% assign class = 'active' %}
         {% endif %}
 
-        {% if menu.submenu %}
+        {% if menu.type == 'categories' %}
+          <li class="header-item {{class}}"><a href="{{site.url}}{{menu.url}}"><h3>{{ menu.title }}</h3></a>
+            <ul class="header-submenu">
+              {% for item in (0..site.categories.size) %}{% unless forloop.last %}
+                {% capture this_word %}{{ cats_list[item] | strip_newlines }}{% endcapture %}
+                  <li class="sub-item"><a href="/categories/#{{this_word}}">{{this_word}}</a></li>
+              {% endunless %}{% endfor %}
+            </ul>
+          </li>
+        {% elsif menu.submenu %}
           <li class="header-item {{class}}"><a href="{{site.url}}{{menu.url}}"><h3>{{ menu.title }}</h3></a>
             <ul class="header-submenu">
               {% for sub in menu.submenu %}
@@ -46,7 +58,16 @@
 <nav id="menu" style="display: none">
   <ul>
     {% for menu in site.menu %}
-      {% if menu.submenu %}
+      {% if menu.type == 'categories' %}
+        <li><a href="{{site.url}}{{menu.url}}"><h3>{{ menu.title }}</h3></a>
+          <ul>
+            {% for item in (0..site.categories.size) %}{% unless forloop.last %}
+              {% capture this_word %}{{ cats_list[item] | strip_newlines }}{% endcapture %}
+                <li><a href="/categories/#{{this_word}}">{{this_word}}</a></li>
+            {% endunless %}{% endfor %}
+          </ul>
+        </li>
+      {% elsif menu.submenu %}
         <li><a href="{{site.url}}{{menu.url}}"><h3>{{ menu.title }}</h3></a>
           <ul>
             {% for sub in menu.submenu %}
