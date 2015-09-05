@@ -13,6 +13,9 @@ Based on https://github.com/mmistakes/hpstr-jekyll-theme
 * Stylesheets for Pygments and Coderay [syntax highlighting](http://mmistakes.github.io/hpstr-jekyll-theme/code-highlighting-post/) to make your code examples look snazzy
 * Author panel, with social links
 
+![Preview](http://aron-bordin.github.io/neo-hpstr-jekyll-theme/images/neo-hpstr-jekyll-theme-preview.png)
+
+
 ---
 
 ## Getting Started
