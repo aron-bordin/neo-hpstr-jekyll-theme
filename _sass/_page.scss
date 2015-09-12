@@ -3,6 +3,7 @@ body {
 	padding: 0;
 	width: 100%;
 	background-color: $body-color;
+	overflow-x: hidden;
 }
 
 // Main
@@ -476,7 +477,6 @@ ul.social-buttons li a:active {
 	display: table;
 	margin-top: 0;
 	width: 100%;
-	height: 100px;
 	overflow: hidden;
 	.header-title-wrap {
 		display: table-cell;
@@ -490,14 +490,24 @@ ul.social-buttons li a:active {
 		@include font-rem(32);
 		color: $white;
 		text-shadow: 1px 1px 4px rgba($base-color, 0.6);
+		display: none;
 		a {
 			color: $white;
+		}
+		@media #{$medium} {
+			display: block;
 		}
 		@media #{$medium} {
 			@include font-rem(26);
 		}
 		@media #{$large} {
 			@include font-rem(36);
+		}
+	}
+	h1.post-title{
+		display: block;
+		@media #{$medium}{
+			display: none;
 		}
 	}
 	p {
