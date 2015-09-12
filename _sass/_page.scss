@@ -612,3 +612,24 @@ ul.social-buttons li a:active {
 .sub-item:hover {
 	border-bottom-color: $header-margin;
 }
+
+.button-twitter {
+	color: $white;
+	position: fixed;
+	margin-top: 15px;
+	margin-right: 10px;
+	top: 0;
+	right: 0;
+	z-index: 10000000000;
+	@media #{$large}{
+		top: auto;
+		bottom: 0;
+	}
+
+	span {
+		display: none;
+		@media #{$medium}{
+			display: inline;
+		}
+	}
+}
