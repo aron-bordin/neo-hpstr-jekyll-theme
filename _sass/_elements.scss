@@ -1,11 +1,11 @@
-hr { 
-    display: block; 
-    margin: 1em 0; 
+hr {
+    display: block;
+    margin: 1em 0;
     padding: 0;
-    height: 1px; 
-    border: 0; 
+    height: 1px;
+    border: 0;
     border-top: 1px solid #ccc;
-    border-bottom: 1px solid #fff; 
+    border-bottom: 1px solid #fff;
 }
 
 // Figures and images
@@ -18,7 +18,7 @@ figure {
   img {
     margin-bottom: 10px;
   }
-  a { 
+  a {
     img {
       @include translate(0, 0);
       -webkit-transition-duration: 0.25s;
@@ -56,9 +56,15 @@ figure {
   }
 }
 svg:not(:root) {
-  overflow: hidden; 
+  overflow: hidden;
+}
+figure.center{
+  text-align: center;
 }
 
+figure.center img{
+  float: none;
+}
 // Buttons
 // --------------------------------------------------
 .btn {

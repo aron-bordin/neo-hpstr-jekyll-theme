@@ -13,6 +13,7 @@ Demo: http://aronbordin.com/neo-hpstr-jekyll-theme
 * Simple [custom 404 page](http://mmistakes.github.io/hpstr-jekyll-theme/404.html) to get you started.
 * Stylesheets for Pygments and Coderay [syntax highlighting](http://mmistakes.github.io/hpstr-jekyll-theme/code-highlighting-post/) to make your code examples look snazzy
 * Author panel, with social links
+* Read more tag support(similar with Wordpress ).
 
 ![Preview](http://aron-bordin.github.io/neo-hpstr-jekyll-theme/images/neo-hpstr-jekyll-theme-preview.png)
 
