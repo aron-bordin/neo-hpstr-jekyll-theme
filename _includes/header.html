@@ -5,7 +5,12 @@
   <div class="header-menu header-menu-top">
     <ul>
       <li class="header-item-title header-toggle "><a href="#menu"><h2><i class="fa fa-bars"></i></h2></a></li>
-      <li class="header-item-title"><a href="{{site.url}}/"><h2> {{ site.title }}</h2></a></li>
+      <li class="header-item-title">
+        <a href="{{site.url}}/">
+          <img class="logo" src="{{ site.logo }}" alt="{{ site.title }}">
+          <h2 class="title"> {{ site.title }}</h2>
+        </a>
+      </li>
       {% for menu in site.menu reversed %}
         {% assign class = nil %}
         {% if ((page.url contains menu.url and menu.url != '/') or (page.url == '/index.html' and menu.url == '/')) %}
