@@ -3,9 +3,10 @@ description:      Describe your website here.
 disqus_shortname: neohpstrtheme
 reading_time:     true
 words_per_minute: 200
+logo:             images/logo.png
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
-url:
+# url: http://aronbordin.com/neo-hpstr-jekyll-theme
 
 menu:
   - title: 'Home'

@@ -527,7 +527,7 @@ ul.social-buttons li a:active {
 		height: 100%;
 		padding: 0;
 		@media #{$large} {
-			max-width: 800px;
+			max-width: 900px;
 		}
 	}
 }
@@ -562,7 +562,13 @@ ul.social-buttons li a:active {
   border-top-width: 5px;
   box-sizing: border-box;
 }
-
+///sections
+.logo{
+  width: 60px;
+	height: 60px;
+	margin-top: 5px;
+  float: left;
+}
 .header-item{
 	display: none;
 	@media #{$large} {
@@ -572,6 +578,14 @@ ul.social-buttons li a:active {
 .header-item-title{
 	float: left;
 	border-top-width: 0px;
+	h2.title {
+		float: left;
+	  padding-left: 5px;
+		display: none;
+		@media #{$medium}{
+			display: block;
+		}
+	}
 }
 
 .header-item.active,
