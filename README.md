@@ -1,6 +1,12 @@
 # Neo-HPSTR Jekyll Theme
 Based on https://github.com/mmistakes/hpstr-jekyll-theme
+
 Demo: http://aronbordin.com/neo-hpstr-jekyll-theme
+
+# Live Demo
+
+You can see it running [here](http://blog.rhesoft.com/) and [here](http://aronbordin.com/neo-hpstr-jekyll-theme/).
+
 
 ## What HPSTR brings to the table:
 
