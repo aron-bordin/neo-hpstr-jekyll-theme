@@ -25,8 +25,8 @@ General notes and suggestions for customizing **Neo-HPSTR**.
 
 ## Setup for an Existing Jekyll site
 
-1. Clone the following folders: `_includes`, `_layouts`, '_sass', `assets`, and `images`.
-2. Clone the following folders/files and personalize content as need: `posts/`, `tags/`, `feed.xml`. and 'index.html'.
+1. Clone the following folders: `_includes`, `_layouts`, `_sass`, `assets`, and `images`.
+2. Clone the following folders/files and personalize content as need: `posts/`, `tags/`, `feed.xml` and `index.html`.
 3. Set the following variables in your `config.yml` file:
 
 {% highlight yaml %}
