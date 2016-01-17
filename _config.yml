@@ -29,9 +29,9 @@ menu:
   - title: 'Favorites'
     url: '#'
     submenu:
-      - title: 'highlighter'
-        url: '/code-highlighting-post/'
-      - title: 'intro'
+      - title: 'Code Highlighter'
+        url: '/intro/code-highlighting-post/'
+      - title: 'Readability'
         url: '/readability-post/'
 
 # Owner/author information
