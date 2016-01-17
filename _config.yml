@@ -32,7 +32,7 @@ menu:
       - title: 'Code Highlighter'
         url: '/intro/code-highlighting-post/'
       - title: 'Sample Post'
-        url: '/sample-post/'
+        url: '/intro/sample-post/'
 
 # Owner/author information
 owner:
