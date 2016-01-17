@@ -8,7 +8,7 @@ Demo: http://aronbordin.com/neo-hpstr-jekyll-theme
 You can see it running [here](http://blog.rhesoft.com/) and [here](http://aronbordin.com/neo-hpstr-jekyll-theme/).
 
 
-## What HPSTR brings to the table:
+## What Neo-HPSTR brings to the table:
 
 * Modern design.
 * Responsive templates for post, page, and post index `_layouts`. Looks great on mobile, tablet, and desktop devices.
@@ -30,4 +30,4 @@ You can see it running [here](http://blog.rhesoft.com/) and [here](http://aronbo
 
 Neo-HPSTR takes advantage of Sass and data files to make customizing easier. These features require Jekyll 2.x and will not work with older versions of Jekyll.
 
-To learn how to install and use this theme check out the [Setup Guide(Original)](http://mmistakes.github.io/hpstr-jekyll-theme/theme-setup/) for more information.
+To learn how to install and use this theme check out the [Setup Guid](http://aronbordin.com/neo-hpstr-jekyll-theme//theme-setup/) for more information.
