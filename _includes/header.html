@@ -2,14 +2,14 @@
 {% assign cats_list = site_cats | split:',' | sort %}
 
 <div class="header-menu header-menu-top">
-    <ul>
+    <ul class="header-item-container">
       <li class="header-item-title header-toggle "><a href="#menu"><h2><i class="fa fa-bars"></i></h2></a></li>
       <li class="header-item-title">
         <a href="{{site.url}}/">
           {% if site.logo %}
             <img class="logo" src="{{site.url}}/{{ site.logo }}" alt="{{ site.title }}">
           {% endif %}
-          <h2 class="title"> {{ site.title }}</h2>
+          <a href="{{site.url}}/" class="title"> {{ site.title }}</a>
         </a>
       </li>
       {% for menu in site.menu reversed %}
