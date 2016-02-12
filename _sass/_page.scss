@@ -15,6 +15,9 @@ body {
 		word-wrap: break-word;
 	}
 }
+.hentry-dark {
+	background-color: $header-color;
+}
 .entry-content {
 	@include font-size(16);
 	// Dotted line underlines for links
@@ -30,6 +33,7 @@ body {
 .entry-date {
 	color: $white;
 }
+
 ///sections
 
 .content-header-title {
