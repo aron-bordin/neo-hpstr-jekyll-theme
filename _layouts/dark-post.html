@@ -13,13 +13,8 @@
 {% include header.html %}
 
 <div id="main" role="main">
-  <article class="hentry">
+  <article class="hentry hentry-dark">
     <div class="entry-content">
-        {% if page.image.feature %}
-            <div class="entry-image-index">
-              <img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}">
-            </div>
-        {% endif %}
       <h1 class="post-title entry-title">{{ page.title }}</h1>
       {{ content }}
       <footer class="entry-meta">
