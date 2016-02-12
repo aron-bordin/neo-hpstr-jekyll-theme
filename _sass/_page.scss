@@ -460,9 +460,12 @@ ul.social-buttons li a:active {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	min-height: 300px;
 	overflow: hidden;
-	background-color: $header-color;
+	height: 50px;
+	@media #{$medium} {
+		background-color: $header-color;
+		min-height: 300px;
+	}
 }
 .header-toggle{
 	display: block;
@@ -490,12 +493,9 @@ ul.social-buttons li a:active {
 		@include font-rem(32);
 		color: $white;
 		text-shadow: 1px 1px 4px rgba($base-color, 0.6);
-		display: none;
+		display: block;
 		a {
 			color: $white;
-		}
-		@media #{$medium} {
-			display: block;
 		}
 		@media #{$medium} {
 			@include font-rem(26);
@@ -533,6 +533,7 @@ ul.social-buttons li a:active {
 }
 .header-menu-top{
 	background-color: $menu-top;
+	box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.4);
 }
 
 .header-menu-overflow{
