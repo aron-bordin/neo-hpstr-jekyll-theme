@@ -607,20 +607,18 @@ ul.social-buttons li a:active {
   border-top-color: $header-margin;
 }
 
-.header-item .header-submenu{
-	display: none;
-}
-
 .header-item:hover .header-submenu{
 	display: block;
 	position: absolute;
 }
 
 .header-submenu {
+	display: none;
 	border-top: 2px solid $header-margin;
 	width: 200px;
 	z-index: 100;
 	list-style-type: none;
+	transform: translateX(-25%);
 }
 
 .sub-item {
@@ -628,6 +626,7 @@ ul.social-buttons li a:active {
 	padding-left: 10px;
 	width: 100%;
 	border-bottom: 1px solid gray;
+	border-left: 1px solid;
 	height: 50px;
 	text-decoration: none;
 }
@@ -639,6 +638,7 @@ ul.social-buttons li a:active {
 }
 .sub-item:hover {
 	border-bottom-color: $header-margin;
+	border-left-color: $header-margin;
 }
 
 .button-twitter {
