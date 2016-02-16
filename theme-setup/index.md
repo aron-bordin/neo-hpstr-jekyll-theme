@@ -232,7 +232,7 @@ Your Google Analytics ID goes here along with meta tags for [Google Webmaster To
 
 ### Top Menu - Navigation Links
 
-To add additional links in the drop down menu edit `_config.yml`. Use the following format to set the URL and title for as many links as you'd like. *External links will open in a new window..* You can create a sub-category using the `submenu` item. Also, you can list your post categories setting the `type: 'categories'`
+To add additional links in the menu edit `_config.yml`. Use the following format to set the URL and title for as many links as you'd like. *External links will open in a new window..* You can create a sub-category using the `submenu` item. Also, you can list your post categories setting the `type: 'categories'`
 
 
 {% highlight yaml %}
