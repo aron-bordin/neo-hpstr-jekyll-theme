@@ -334,17 +334,18 @@ Here you'll find some useful scss variables to help you to customize your Blog i
 
 #### Top Navbar Size
 
-To change its size, edit the **$menu-height** value. It's recommended a value between 50px and 100px. This variable will automatically update the icon and menu size for you.
+To change its size, edit the **`$menu-height`** value. It's recommended a value between 50px and 100px. This variable will automatically update the icon and menu size for you.
 
 #### Top Navbar Colors
 
 The navbar uses two colors, the top color and overflow color. The top color represents the navbar color when the window is not scrolled and the overflow color represents the color when we have a sufficient scroll to change its color.
 
-You can change these colors using the **$menu-top** and **$menu-overflow** variable values.
+You can change these colors using the **`$menu-top`** and **`$menu-overflow`** variable values.
 
 #### Top Navbar hover color
 
-The color that you see in the item under the mouse can be changed in the **$header-margin** variable.
+The color that you see in the item under the mouse can be changed in the **`$header-margin`** variable.
+
 ---
 
 ## Further Customization
