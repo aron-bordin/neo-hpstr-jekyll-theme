@@ -1,6 +1,7 @@
 title:            Blog Title
 description:      Describe your website here.
-disqus_shortname: neohpstrtheme # put your disqus here
+# put your disqus here
+disqus_shortname: 
 reading_time:     true # if true, shows the estimated reading time for a post
 words_per_minute: 200
 logo:             images/logo.png # logo visible in the topbar
@@ -50,7 +51,7 @@ owner:
   flickr:
   tumblr:
   # google plus id, include the '+', eg +AronBordin
-  google_plus:    +yourid
+  google_plus:
 
 social:
   - title: "github"
