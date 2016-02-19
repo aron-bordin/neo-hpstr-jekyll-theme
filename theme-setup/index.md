@@ -207,7 +207,7 @@ comments: false
 
 ### Social Share Links
 
-To enable Facebook, Twitter, and Google+ share links on a post or page, add the following to its front matter:
+To disable Facebook, Twitter, and Google+ share links on a post or page, add the following to its front matter:
 
 {% highlight yaml %}
 share: false
@@ -224,7 +224,7 @@ float_share: true
 
 ### Owner/Author Information
 
-Change your name, and avatar photo (200x200 pixels or larger), email, and social networking URLs. If you want to link to an external image on Gravatar or something similar you'll need to edit the path in `head.html` since it assumes it is located in `/images`.
+Change your name, and avatar photo (200x200 pixels or larger), email, and social networking URLs. If you want to link to an external image on Gravatar or something similar you'll need to edit the path in `_includes/author.html` since it assumes it is hosted on your site.
 
 ### Google Analytics and Webmaster Tools
 
@@ -232,7 +232,7 @@ Your Google Analytics ID goes here along with meta tags for [Google Webmaster To
 
 ### Top Menu - Navigation Links
 
-To add additional links in the drop down menu edit `_config.yml`. Use the following format to set the URL and title for as many links as you'd like. *External links will open in a new window..* You can create a sub-category using the `submenu` item. Also, you can list your post categories setting the `type: 'categories'`
+To add additional links in the menu edit `_config.yml`. Use the following format to set the URL and title for as many links as you'd like. *External links will open in a new window..* You can create a sub-category using the `submenu` item. Also, you can list your post categories setting the `type: 'categories'`
 
 
 {% highlight yaml %}
@@ -298,7 +298,7 @@ For the most part you can leave these as is since the author/owner details are p
 
 ### Reading Time
 
-On by default. To turn off remove `reading_time` from `_config.yml. Default words per minute is set at 200 and can changed by updating `words_per_minute` in `_config.yml`.
+On by default. To turn off remove `reading_time` from `_config.yml`. Default words per minute is set at 200 and can changed by updating `words_per_minute` in `_config.yml`.
 
 #### Post/Page Thumbnails for OG and Twitter Cards
 
@@ -334,17 +334,18 @@ Here you'll find some useful scss variables to help you to customize your Blog i
 
 #### Top Navbar Size
 
-To change its size, edit the **$menu-height** value. It's recommended a value between 50px and 100px. This variable will automatically update the icon and menu size for you.
+To change its size, edit the **`$menu-height`** value. It's recommended a value between 50px and 100px. This variable will automatically update the icon and menu size for you.
 
 #### Top Navbar Colors
 
 The navbar uses two colors, the top color and overflow color. The top color represents the navbar color when the window is not scrolled and the overflow color represents the color when we have a sufficient scroll to change its color.
 
-You can change these colors using the **$menu-top** and **$menu-overflow** variable values.
+You can change these colors using the **`$menu-top`** and **`$menu-overflow`** variable values.
 
 #### Top Navbar hover color
 
-The color that you see in the item under the mouse can be changed in the **$header-margin** variable.
+The color that you see in the item under the mouse can be changed in the **`$header-margin`** variable.
+
 ---
 
 ## Further Customization
@@ -359,7 +360,9 @@ To modify the site's JavaScript files I setup a Grunt build script to lint/conca
 npm install
 {% endhighlight %}
 
-From the theme's root, use `grunt` concatenate JavaScript files, and optimize .jpg, .png, and .svg files in the `images/` folder. You can also use `grunt dev` in combination with `jekyll build --watch` to watch for updates JS files that Grunt will then automatically re-build as you write your code which will in turn auto-generate your Jekyll site when developing locally.
+From the theme's root, use `grunt` to concatenate JavaScript files and optimize `.jpg`, `.png` and `.svg` files in the `images/` folder.
+
+You can also use `grunt dev` in combination with `bundle exec jekyll serve` to watch for updates in JS files that Grunt will then automatically re-build as you write your code, which will in turn auto-generate your Jekyll site when developing locally.
 
 ---
 
