@@ -25,8 +25,8 @@ General notes and suggestions for customizing **Neo-HPSTR**.
 
 ## Setup for an Existing Jekyll site
 
-1. Clone the following folders: `_includes`, `_layouts`, '_sass', `assets`, and `images`.
-2. Clone the following folders/files and personalize content as need: `posts/`, `tags/`, `feed.xml`. and 'index.html'.
+1. Clone the following folders: `_includes`, `_layouts`, `_sass`, `assets`, and `images`.
+2. Clone the following folders/files and personalize content as need: `posts/`, `tags/`, `feed.xml` and `index.html`.
 3. Set the following variables in your `config.yml` file:
 
 {% highlight yaml %}
@@ -145,7 +145,7 @@ exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "R
 
 ## Running Jekyll
 
-If `jekyll build` and `jekyll serve` throw errors you may have to run Jekyll with `bundled exec` instead.
+If `jekyll build` and `jekyll serve` throw errors you may have to run Jekyll with `bundle exec` instead.
 
 > In some cases, running executables without bundle exec may work, if the executable happens to be installed in your system and does not pull in any gems that conflict with your bundle.
 >
