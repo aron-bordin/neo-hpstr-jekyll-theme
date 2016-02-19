@@ -85,6 +85,10 @@ owner:
   # google plus id, include the '+', eg +AronBordin
   google_plus:    +yourid
 
+# Twitter account associated with the site if different from owner/author twitter account.
+# Used in Twitter cards.
+twitter:
+
 social:
   - title: "github"
     url: "https://github.com/aron-bordin"
@@ -103,6 +107,7 @@ bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York
+locale:      en_US
 future:      true
 highlighter: pygments
 markdown:    kramdown
