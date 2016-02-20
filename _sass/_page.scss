@@ -375,6 +375,7 @@ ul.social-buttons li a:active {
 	margin-left: -15px;
 	margin-right: -15px;
 	margin-bottom: 10px;
+	position: relative;
 	@media #{$medium} {
 		margin-top: -30px;
 		margin-left: -30px;

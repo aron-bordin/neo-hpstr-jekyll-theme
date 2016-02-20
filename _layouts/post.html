@@ -18,6 +18,7 @@
         {% if page.image.feature %}
             <div class="entry-image-index">
               <img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}">
+              {% if page.image.credit %}<div class="image-credit">Image source: <a target="_blank" href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
             </div>
         {% endif %}
       <h1 class="post-title entry-title">{{ page.title }}</h1>
