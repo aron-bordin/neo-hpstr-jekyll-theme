@@ -1,6 +1,7 @@
 title:            Blog Title
 description:      Describe your website here.
-disqus_shortname: neohpstrtheme # put your disqus here
+# put your disqus here
+disqus_shortname: 
 reading_time:     true # if true, shows the estimated reading time for a post
 words_per_minute: 200
 logo:             images/logo.png # logo visible in the topbar
@@ -51,7 +52,11 @@ owner:
   flickr:
   tumblr:
   # google plus id, include the '+', eg +AronBordin
-  google_plus:    +yourid
+  google_plus:
+
+# Twitter account associated with the site if different from owner/author twitter account.
+# Used in Twitter cards.
+twitter: 
 
 social:
   - title: "github"
@@ -71,6 +76,7 @@ bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York
+locale:      en_US
 future:      true
 highlighter: rouge
 markdown:    kramdown
@@ -102,6 +108,16 @@ kramdown:
     coderay_tab_width: 4
     coderay_bold_every: 10
     coderay_css: class
+
+# Octopress
+# Default extensions
+post_ext: md
+page_ext: md
+# Found in _templates/
+post_layout: post
+page_layout: page
+# Format titles with titlecase?
+titlecase: true
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]

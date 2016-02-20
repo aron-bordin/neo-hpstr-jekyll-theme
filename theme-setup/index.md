@@ -25,8 +25,8 @@ General notes and suggestions for customizing **Neo-HPSTR**.
 
 ## Setup for an Existing Jekyll site
 
-1. Clone the following folders: `_includes`, `_layouts`, '_sass', `assets`, and `images`.
-2. Clone the following folders/files and personalize content as need: `posts/`, `tags/`, `feed.xml`. and 'index.html'.
+1. Clone the following folders: `_includes`, `_layouts`, `_sass`, `assets`, and `images`.
+2. Clone the following folders/files and personalize content as need: `posts/`, `tags/`, `feed.xml` and `index.html`.
 3. Set the following variables in your `config.yml` file:
 
 {% highlight yaml %}
@@ -85,6 +85,10 @@ owner:
   # google plus id, include the '+', eg +AronBordin
   google_plus:    +yourid
 
+# Twitter account associated with the site if different from owner/author twitter account.
+# Used in Twitter cards.
+twitter:
+
 social:
   - title: "github"
     url: "https://github.com/aron-bordin"
@@ -103,6 +107,7 @@ bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York
+locale:      en_US
 future:      true
 highlighter: pygments
 markdown:    kramdown
@@ -145,7 +150,7 @@ exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "R
 
 ## Running Jekyll
 
-If `jekyll build` and `jekyll serve` throw errors you may have to run Jekyll with `bundled exec` instead.
+If `jekyll build` and `jekyll serve` throw errors you may have to run Jekyll with `bundle exec` instead.
 
 > In some cases, running executables without bundle exec may work, if the executable happens to be installed in your system and does not pull in any gems that conflict with your bundle.
 >
@@ -207,7 +212,7 @@ comments: false
 
 ### Social Share Links
 
-To enable Facebook, Twitter, and Google+ share links on a post or page, add the following to its front matter:
+To disable Facebook, Twitter, and Google+ share links on a post or page, add the following to its front matter:
 
 {% highlight yaml %}
 share: false
@@ -224,7 +229,7 @@ float_share: true
 
 ### Owner/Author Information
 
-Change your name, and avatar photo (200x200 pixels or larger), email, and social networking URLs. If you want to link to an external image on Gravatar or something similar you'll need to edit the path in `head.html` since it assumes it is located in `/images`.
+Change your name, and avatar photo (200x200 pixels or larger), email, and social networking URLs. If you want to link to an external image on Gravatar or something similar you'll need to edit the path in `_includes/author.html` since it assumes it is hosted on your site.
 
 ### Google Analytics and Webmaster Tools
 
@@ -232,7 +237,7 @@ Your Google Analytics ID goes here along with meta tags for [Google Webmaster To
 
 ### Top Menu - Navigation Links
 
-To add additional links in the drop down menu edit `_config.yml`. Use the following format to set the URL and title for as many links as you'd like. *External links will open in a new window..* You can create a sub-category using the `submenu` item. Also, you can list your post categories setting the `type: 'categories'`
+To add additional links in the menu edit `_config.yml`. Use the following format to set the URL and title for as many links as you'd like. *External links will open in a new window..* You can create a sub-category using the `submenu` item. Also, you can list your post categories setting the `type: 'categories'`
 
 
 {% highlight yaml %}
@@ -265,7 +270,7 @@ menu:
 While completely optional, I've included Octopress and some starter templates to automate the creation of new posts and pages. To take advantage of it start by installing the [Octopress](https://github.com/octopress/octopress) gem if it isn't already.
 
 {% highlight bash %}
-$ gem install octopress --pre
+$ gem install octopress
 {% endhighlight %}
 
 ### New Post
@@ -279,7 +284,7 @@ $ octopress new post "Post Title"
 Default works great if you want all your posts in one directory, but if you're like me and want to group them into subfolders like `/posts`, `/portfolio`, etc. Then this is the command for you. By specifying the DIR it will create a new post in that folder and populate the `categories:` YAML with the same value.
 
 {% highlight bash %}
-$ octopress new post "New Post Title" --dir posts
+$ octopress new post "New Portfolio Post Title" --dir portfolio
 {% endhighlight %}
 
 ### New Page
@@ -298,7 +303,7 @@ For the most part you can leave these as is since the author/owner details are p
 
 ### Reading Time
 
-On by default. To turn off remove `reading_time` from `_config.yml. Default words per minute is set at 200 and can changed by updating `words_per_minute` in `_config.yml`.
+On by default. To turn off remove `reading_time` from `_config.yml`. Default words per minute is set at 200 and can changed by updating `words_per_minute` in `_config.yml`.
 
 #### Post/Page Thumbnails for OG and Twitter Cards
 
@@ -312,10 +317,12 @@ Here's an example of what a tweet to your site could look like if you activate T
 
 Video embeds are responsive and scale with the width of the main content block with the help of [FitVids](http://fitvidsjs.com/).
 
-Not sure if this only effects Kramdown or if it's an issue with Markdown in general. But adding YouTube video embeds causes errors when building your Jekyll site. To fix add a space between the `<iframe>` tags and remove `allowfullscreen`. Example below:
+Adding YouTube video embeds causes errors when building your Jekyll site. To fix wrap the html within `{::nomarkdown}` tags. Example below:
 
 {% highlight html %}
-<iframe width="560" height="315" src="http://www.youtube.com/embed/PWf4WUoMXwg" frameborder="0"> </iframe>
+{::nomarkdown}
+<iframe width="560" height="315" src="http://www.youtube.com/embed/PWf4WUoMXwg" frameborder="0" allowfullscreen></iframe>
+{:/nomarkdown}
 {% endhighlight %}
 
 ### Twitter Cards
@@ -334,17 +341,18 @@ Here you'll find some useful scss variables to help you to customize your Blog i
 
 #### Top Navbar Size
 
-To change its size, edit the **$menu-height** value. It's recommended a value between 50px and 100px. This variable will automatically update the icon and menu size for you.
+To change its size, edit the **`$menu-height`** value. It's recommended a value between 50px and 100px. This variable will automatically update the icon and menu size for you.
 
 #### Top Navbar Colors
 
 The navbar uses two colors, the top color and overflow color. The top color represents the navbar color when the window is not scrolled and the overflow color represents the color when we have a sufficient scroll to change its color.
 
-You can change these colors using the **$menu-top** and **$menu-overflow** variable values.
+You can change these colors using the **`$menu-top`** and **`$menu-overflow`** variable values.
 
 #### Top Navbar hover color
 
-The color that you see in the item under the mouse can be changed in the **$header-margin** variable.
+The color that you see in the item under the mouse can be changed in the **`$header-margin`** variable.
+
 ---
 
 ## Further Customization
@@ -359,7 +367,9 @@ To modify the site's JavaScript files I setup a Grunt build script to lint/conca
 npm install
 {% endhighlight %}
 
-From the theme's root, use `grunt` concatenate JavaScript files, and optimize .jpg, .png, and .svg files in the `images/` folder. You can also use `grunt dev` in combination with `jekyll build --watch` to watch for updates JS files that Grunt will then automatically re-build as you write your code which will in turn auto-generate your Jekyll site when developing locally.
+From the theme's root, use `grunt` to concatenate JavaScript files and optimize `.jpg`, `.png` and `.svg` files in the `images/` folder.
+
+You can also use `grunt dev` in combination with `bundle exec jekyll serve` to watch for updates in JS files that Grunt will then automatically re-build as you write your code, which will in turn auto-generate your Jekyll site when developing locally.
 
 ---
 

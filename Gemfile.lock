@@ -139,11 +139,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  jekyll
-  jekyll-paginate
-  jekyll-sitemap
   octopress (~> 3.0.0.rc.12)
-  sass
 
 BUNDLED WITH
    1.11.2
