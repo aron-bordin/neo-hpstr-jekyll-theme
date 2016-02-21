@@ -73,22 +73,16 @@ owner:
   avatar:         images/avatar.jpg
   bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
   email:          you@email.com
-  # Social networking links used in footer. Update and remove as you like.
+  # Twitter nick for use in Twitter cards and follow button.
   twitter: aron_bordin # if no twitter in this config, the twitter follow button will be removed
-  facebook:
+  # GitHub nick for use in follow button in author block.
   github: aron-bordin
-  stackexchange:
-  linkedin:
-  instagram:
-  flickr:
-  tumblr:
-  # google plus id, include the '+', eg +AronBordin
-  google_plus:    +yourid
 
 # Twitter account associated with the site if different from owner/author twitter account.
 # Used in Twitter cards.
 twitter:
 
+# Social networking links used in author block underneath posts. Update and remove as you like.
 social:
   - title: "github"
     url: "https://github.com/aron-bordin"
