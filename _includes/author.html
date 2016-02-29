@@ -15,7 +15,7 @@
         {% endfor %}
       </ul>
       {% if site.owner.github %}
-        <a aria-label="Follow @{{site.owner.github}} on GitHub" data-style="mega" href="https://github.com/{{site.owner.github}}" class="github-button">Follow @{{site.owner.github}}</a>
+        <iframe src="http://ghbtns.com/github-btn.html?user={{site.owner.github}}&type=follow" height="30" width="168" frameborder="0" scrolling="0" style="width:168px; height: 30px;" allowTransparency="true"></iframe>
       {% endif %}
       <br>
       {% if site.owner.twitter %}
