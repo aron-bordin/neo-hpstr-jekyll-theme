@@ -15,7 +15,7 @@ You can see it running [here](http://blog.rhesoft.com/) and [here](http://aronbo
 
 * Modern design.
 * Responsive templates for post, page, and post index `_layouts`. Looks great on mobile, tablet, and desktop devices.
-* Gracefully degrades in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.  
+* Gracefully degrades in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.
 * Sweet topbar animated menu with support for drop-downs.
 * Optional [Disqus](http://disqus.com) comments and social sharing links.
 * [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) support for a better social sharing experience.
@@ -33,4 +33,4 @@ You can see it running [here](http://blog.rhesoft.com/) and [here](http://aronbo
 
 Neo-HPSTR takes advantage of Sass and data files to make customizing easier. These features require Jekyll 2.x and will not work with older versions of Jekyll.
 
-To learn how to install and use this theme check out the [Setup Guid](http://aronbordin.com/neo-hpstr-jekyll-theme//theme-setup/) for more information.
+To learn how to install and use this theme check out the [Setup Guide](http://aronbordin.com/neo-hpstr-jekyll-theme//theme-setup/) for more information.
