@@ -37,9 +37,8 @@ disqus_shortname: neohpstrtheme # put your disqus here
 reading_time:     true # if true, shows the estimated reading time for a post
 words_per_minute: 200
 logo:             images/logo.png # logo visible in the topbar
-# Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
-# When testing locally leave blank or use http://localhost:4000
-# url: http://aronbordin.com/neo-hpstr-jekyll-theme
+url: http://aronbordin.com # the base hostname & protocol for your site
+baseurl: /neo-hpstr-jekyll-theme # the subpath of your site, e.g. /blog
 
 # draw your top menu here
 # each item must have a title and a url.
@@ -194,7 +193,7 @@ hpstr-jekyll-theme/
 
 ## Customization
 
-Most of the variables found here are used in the .html files found in `_includes` if you need to add or remove anything. A good place to start would be to add the `title`, `description`, and `url` for your site. Links are absolute and prefixed with `{{ "{{ site.url " }}}}` in the various `_includes` and `_layouts`, so remember to properly set `url`[^1] to `http://localhost:4000` when developing locally.
+Most of the variables found here are used in the .html files found in `_includes` if you need to add or remove anything. A good place to start would be to add the `title`, `description`, and `url` for your site.
 
 ### Disqus Comments
 
@@ -305,7 +304,7 @@ Post and page thumbnails work the same way. These are used by [Open Graph](https
 
 Here's an example of what a tweet to your site could look like if you activate Twitter Cards and include all the metas in your post's YAML.
 
-![Twitter Card summary large image screenshot]({{ site.url }}/images/twitter-card-summary-large-image.jpg)
+![Twitter Card summary large image screenshot]({{ "/images/twitter-card-summary-large-image.jpg" | prepend: site.baseurl }})
 
 ### Videos
 
@@ -325,7 +324,7 @@ Twitter cards make it possible to attach images and post summaries to Tweets tha
 
 ### Link Post Type
 
-Link blog like a champ by adding `link: http://url-you-want-linked` to a post's YAML front matter. Arrow glyph links to the post's permalink and the the `post-title` links to the source URL. Here's an [example of a link post]({{ site.url }}/sample-link-post/) if you need a visual.
+Link blog like a champ by adding `link: http://url-you-want-linked` to a post's YAML front matter. Arrow glyph links to the post's permalink and the the `post-title` links to the source URL. Here's an [example of a link post]({{ "/sample-link-post/" | prepend: site.baseurl }}) if you need a visual.
 
 ---
 
@@ -375,10 +374,4 @@ Having a problem getting something to work or want to know why I setup something
 
 ## License
 
-This theme is free and open source software, distributed under the [MIT License]({{ site.url }}/LICENSE) version 2 or later. So feel free to to modify this theme to suit your needs.
-
----
-
-[^1]: Used to generate absolute URLs in `feed.xml`, and for canonical URLs in `head.html`. Don't include a trailing `/` in your base url ie: http://mademistakes.com. When developing locally I suggest using http://localhost:4000 or whatever localhost you're using to properly load all theme stylesheets, scripts, and image assets. If you leave this variable blank all links will resolve correctly except those pointing to home.
-
-[^2]: If you're using GitHub Pages to host your site be aware that plugins are disabled. So you'll need to build your site locally and then manually deploy if you want to use this sweet plugin.
+This theme is free and open source software, distributed under the [MIT License]({{ "/LICENSE" | prepend: site.baseurl }}) version 2 or later. So feel free to to modify this theme to suit your needs.
