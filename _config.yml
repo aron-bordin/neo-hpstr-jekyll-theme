@@ -5,8 +5,18 @@ disqus_shortname:
 reading_time:     true # if true, shows the estimated reading time for a post
 words_per_minute: 200
 logo:             images/logo.png # logo visible in the topbar
-url: http://aronbordin.com # the base hostname & protocol for your site
-baseurl: /neo-hpstr-jekyll-theme # the subpath of your site, e.g. /blog
+
+# The base hostname & protocol for your site. This is included when an
+# absolute URL is needed.
+url: http://aronbordin.com
+# The subpath of your site, e.g. /blog. This is always included in
+# generated URLs.
+baseurl: /neo-hpstr-jekyll-theme
+
+# If you prefer absolute URLs everywhere, use the following.
+# When testing locally, leave baseurl blank or use http://localhost:4000.
+#url: ''
+#baseurl: http://aronbordin.com/neo-hpstr-jekyll-theme
 
 # draw your top menu here
 # each item must have a title and a url.
