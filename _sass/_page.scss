@@ -185,6 +185,13 @@ header .entry-meta {
 .year-heading {
 	margin-top: 0;
 }
+// Go to the exact location of bookmarks in tags, categories
+.anchor-bookmark{
+  display: block;
+  height: $menu-height; /*same height as header*/
+  margin-top: -$menu-height; /*same height as header*/
+  visibility: hidden;
+}
 // Permalink icon for link post
 .permalink {
 	margin-right: 7px;
