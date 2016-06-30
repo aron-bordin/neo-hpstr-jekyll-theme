@@ -14,17 +14,15 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}">
 <meta property="og:site_name" content="{{ site.title }}">
-{% if page.image.feature %}<meta property="og:image" content="{{ site.url }}/images/{{ page.image.feature }}">
-{% else %}<meta property="og:image" content="{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb }}{% else %}{{ site.url }}/images/{{ site.logo }}{% endif %}">{% endif %}
+<meta property="og:image" content="{{ "/images/" | prepend: site.baseurl | prepend: site.url }}{% if page.image.feature %}{{ page.image.feature }}{% else %}{% if page.image.thumb %}{{ page.image.thumb }}{% else %}{{ site.logo }}{% endif %}{% endif %}">
 
 {% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
 {% if site.bing_verify %}<meta name="msvalidate.01" content="{{ site.bing_verify }}">{% endif %}
 
-{% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
-<link rel="canonical" href="{{ canonical }}">
-<link href="{{ site.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -32,21 +30,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
-<link rel="stylesheet" href="{{ site.url }}/assets/css/jquery.mmenu.all.css">
-<link rel="stylesheet" href="{{ site.url }}/assets/css/jquery.floating-social-share.min.css">
+<link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+<link rel="stylesheet" href="{{ "/assets/css/jquery.mmenu.all.css" | prepend: site.baseurl }}">
+<link rel="stylesheet" href="{{ "/assets/css/jquery.floating-social-share.min.css" | prepend: site.baseurl }}">
 <!-- Webfonts -->
 <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
 
 <meta http-equiv="cleartype" content="on">
 
 <!-- Load Modernizr -->
-<script type="text/javascript" src="{{ site.url }}/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+<script type="text/javascript" src="{{ "/assets/js/vendor/modernizr-2.6.2.custom.min.js" | prepend: site.baseurl }}"></script>
 
 {% include icons.html %}
 
 {% if page.image.background or site.background %}
 {% capture background %}{% if page.image.background %}{{ page.image.background }}{% else %}{{ site.background }}{% endif %}{% endcapture %}
-{% unless background contains 'http://' or background contains 'https://' %}{% capture background %}{{ site.url }}/images/{{ background }}{% endcapture %}{% endunless %}
+{% unless background contains 'http://' or background contains 'https://' %}{% capture background %}{{ background | prepend: "/images/" | prepend: site.baseurl }}{% endcapture %}{% endunless %}
 <style type="text/css">body {background-image:url({{ background }});}</style>
 {% endif %}

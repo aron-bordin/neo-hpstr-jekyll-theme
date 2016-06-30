@@ -5,11 +5,11 @@
     <ul class="header-item-container">
       <li class="header-item-title header-toggle "><a href="#menu"><h2><i class="fa fa-bars"></i></h2></a></li>
       <li class="header-item-title">
-        <a href="{{site.url}}/">
+        <a href="{{ site.baseurl }}/">
           {% if site.logo %}
-            <img class="logo" src="{{site.url}}/{{ site.logo }}" alt="{{ site.title }}">
+            <img class="logo" src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.title }}">
           {% endif %}
-          <a href="{{site.url}}/" class="title"> {{ site.title }}</a>
+          <a href="{{ site.baseurl }}/" class="title"> {{ site.title }}</a>
         </a>
       </li>
       {% for menu in site.menu reversed %}
@@ -19,7 +19,7 @@
         {% endif %}
 
         {% if menu.type == 'categories' %}
-          <li class="header-item {{class}}"><a href="{{site.url}}{{menu.url}}"><h3>{{ menu.title }}</h3></a>
+          <li class="header-item {{class}}"><a href="{{ site.baseurl }}{{ menu.url }}"><h3>{{ menu.title }}</h3></a>
             <ul class="header-submenu">
               {% for item in (0..site.categories.size) %}{% unless forloop.last %}
                 {% capture this_word %}{{ cats_list[item] | strip_newlines }}{% endcapture %}
@@ -28,10 +28,10 @@
             </ul>
           </li>
         {% elsif menu.submenu %}
-          <li class="header-item {{class}}"><a href="{{site.url}}{{menu.url}}"><h3>{{ menu.title }}</h3></a>
+          <li class="header-item {{class}}"><a href="{{ site.baseurl }}{{ menu.url }}"><h3>{{ menu.title }}</h3></a>
             <ul class="header-submenu">
               {% for sub in menu.submenu %}
-                <li class="sub-item"><a href="{{site.url}}{{sub.url}}">{{sub.title}}</a></li>
+                <li class="sub-item"><a href="{{ site.baseurl }}{{ sub.url }}">{{sub.title}}</a></li>
               {% endfor %}
             </ul>
           </li>
@@ -39,11 +39,11 @@
             {% if menu.url contains 'http://' or menu.url contains 'https://' %}
                 <li class="header-item {{class}}"><a href="{{menu.url}}" target="_blank"><h3>{{ menu.title }}</h3></a></li>
             {% else %}
-                <li class="header-item {{class}}"><a href="{{site.url}}{{menu.url}}"><h3>{{ menu.title }}</h3></a></li>
+                <li class="header-item {{class}}"><a href="{{ site.baseurl }}{{ menu.url }}"><h3>{{ menu.title }}</h3></a></li>
             {% endif %}
         {% endif %}
       {% endfor %}
-      <li class="header-item"><a href="{{site.url}}/search"><h3><i class="fa fa-search"></i></h3></a></li>
+      <li class="header-item"><a href="{{ "/search" | prepend: site.baseurl }}"><h3><i class="fa fa-search"></i></h3></a></li>
     </ul>
   </div>
 <div class="entry-header">
@@ -76,24 +76,24 @@
   <ul>
     {% for menu in site.menu %}
       {% if menu.type == 'categories' %}
-        <li><a href="{{site.url}}{{menu.url}}"><h3>{{ menu.title }}</h3></a>
+        <li><a href="{{ site.baseurl }}{{ menu.url }}"><h3>{{ menu.title }}</h3></a>
           <ul>
             {% for item in (0..site.categories.size) %}{% unless forloop.last %}
               {% capture this_word %}{{ cats_list[item] | strip_newlines }}{% endcapture %}
-                <li><a href="{{site.url}}/categories/#{{this_word}}">{{this_word}}</a></li>
+                <li><a href="{{ site.baseurl }}/categories/#{{this_word}}">{{this_word}}</a></li>
             {% endunless %}{% endfor %}
           </ul>
         </li>
       {% elsif menu.submenu %}
-        <li><a href="{{site.url}}{{menu.url}}"><h3>{{ menu.title }}</h3></a>
+        <li><a href="{{ site.baseurl }}{{ menu.url }}"><h3>{{ menu.title }}</h3></a>
           <ul>
             {% for sub in menu.submenu %}
-              <li><a href="{{site.url}}{{sub.url}}">{{sub.title}}</a></li>
+              <li><a href="{{ site.baseurl }}{{ sub.url }}">{{sub.title}}</a></li>
             {% endfor %}
           </ul>
         </li>
       {% else %}
-        <li><a href="{{site.url}}{{menu.url}}"><h3>{{ menu.title }}</h3></a></li>
+        <li><a href="{{ site.baseurl }}{{ menu.url }}"><h3>{{ menu.title }}</h3></a></li>
       {% endif %}
     {% endfor %}
   </ul>

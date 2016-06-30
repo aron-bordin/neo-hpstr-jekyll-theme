@@ -20,7 +20,7 @@ comments: false
     new SimpleJekyllSearch({
       searchInput: document.getElementById('search-input'),
       resultsContainer: document.getElementById('results-container'),
-      json: '{{site.url}}/search.json',
+      json: '{{ "/search.json" | prepend: site.baseurl }}',
       searchResultTemplate: '<li class="entry-title"><a href="{url}" title="{title}">{title}</a></li>'
     });
   }
