@@ -5,7 +5,7 @@ modified:
 categories: {{ dir }}
 description:
 tags: []
-time: XX minutes
+time:
 image:
   feature:
   credit:
