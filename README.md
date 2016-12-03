@@ -1,4 +1,5 @@
 # [Neo-HPSTR Jekyll Theme](http://aronbordin.com/neo-hpstr-jekyll-theme)
+[![Gem Version](https://badge.fury.io/rb/neo-hpstr-jekyll-theme.svg)](https://badge.fury.io/rb/neo-hpstr-jekyll-theme)
 
 Neo-HPSTR Jekyll is a responsive and modern blog template.
 
@@ -41,7 +42,7 @@ If you already have a jekyll project, jump to the instructions bellow. Otherwise
 
 Inside the project folder, install the theme as follows:
 
-1. Download the starter `/demo` content, [quick download link](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/daviddarnes/alembic/tree/master/demo) and extract the content to the blog folter.
+1. Download the starter `/demo` content, [quick download link](https://github.com/aron-bordin/neo-hpstr-jekyll-theme/tree/master/demo) and extract the content to the blog folter.
 2. Install bundler with `$ gem install bundler`
 3. Install gems with `$ bundle install`
 4. Run Jekyll with `$ bundle exec jekyll serve --watch`
@@ -102,7 +103,7 @@ Here are some tips on how to customize your blog theme. If you have questions, j
     │   ├── page.html
     │   └── post.html
     ├── LICENSE.txt
-    ├── neo-hpstr.gemspec
+    ├── neo-hpstr-jekyll-theme.gemspec
     ├── package.json
     ├── _posts                     # sample posts
     │   ├── 2016-11-26-sample-post-images.md
