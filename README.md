@@ -42,7 +42,7 @@ If you already have a jekyll project, jump to the instructions bellow. Otherwise
 
 Inside the project folder, install the theme as follows:
 
-1. Download the starter `/demo` content, [quick download link](https://github.com/aron-bordin/neo-hpstr-jekyll-theme/tree/master/demo) and extract the content to the blog folter.
+1. Download the starter `/demo` content, [quick download link](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/aron-bordin/neo-hpstr-jekyll-theme/tree/master/demo) and extract the content to the blog folter.
 2. Install bundler with `$ gem install bundler`
 3. Install gems with `$ bundle install`
 4. Run Jekyll with `$ bundle exec jekyll serve --watch`
