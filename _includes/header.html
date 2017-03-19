@@ -93,7 +93,11 @@
           </ul>
         </li>
       {% else %}
-        <li><a href="{{site.url}}{{menu.url}}"><h3>{{ menu.title }}</h3></a></li>
+        {% if menu.url contains 'http://' or menu.url contains 'https://' %}
+          <li><a href="{{menu.url}}" target="_blank"><h3>{{ menu.title }}</h3></a></li>
+        {% else %}
+          <li><a href="{{site.url}}{{menu.url}}"><h3>{{ menu.title }}</h3></a></li>
+        {% endif %}
       {% endif %}
     {% endfor %}
   </ul>
