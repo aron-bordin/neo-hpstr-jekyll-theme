@@ -34,7 +34,13 @@ comments: false
   </header>
   <div class="entry-content">
       {{ post.excerpt }}
-      {% if post.content contains "<!-- more -->" %}
+      {% capture content_words %}
+        {{ post.content | number_of_words }}
+      {% endcapture %}
+      {% capture excerpt_words %}
+        {{ post.excerpt | number_of_words }}
+      {% endcapture %}
+      {% if excerpt_words != content_words %}
           <div align="center">
               <div markdown="0"><a href="{{ site.url }}{{ post.url }}" class="btn btn-info">Continue Reading ...</a></div>
           </div>
