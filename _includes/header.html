@@ -85,15 +85,27 @@
           </ul>
         </li>
       {% elsif menu.submenu %}
-        <li><a href="{{site.url}}{{menu.url}}"><h3>{{ menu.title }}</h3></a>
+        {% if menu.url contains 'http://' or menu.url contains 'https://' %}
+            <li><a href="{{menu.url}}"><h3>{{ menu.title }}</h3></a>
+        {% else %}
+            <li><a href="{{site.url}}{{menu.url}}"><h3>{{ menu.title }}</h3></a>
+        {% endif %}
           <ul>
             {% for sub in menu.submenu %}
-              <li><a href="{{site.url}}{{sub.url}}">{{sub.title}}</a></li>
+              {% if sub.url contains 'http://' or sub.url contains 'https://' %}
+                  <li><a href="{{sub.url}}">{{sub.title}}</a></li>
+              {% else %}
+                  <li><a href="{{site.url}}{{sub.url}}">{{sub.title}}</a></li>
+              {% endif %}
             {% endfor %}
           </ul>
         </li>
       {% else %}
-        <li><a href="{{site.url}}{{menu.url}}"><h3>{{ menu.title }}</h3></a></li>
+        {% if menu.url contains 'http://' or menu.url contains 'https://' %}
+            <li><a href="{{menu.url}}"><h3>{{ menu.title }}</h3></a></li>
+        {% else %}
+            <li><a href="{{site.url}}{{menu.url}}"><h3>{{ menu.title }}</h3></a></li>
+        {% endif %}
       {% endif %}
     {% endfor %}
   </ul>
