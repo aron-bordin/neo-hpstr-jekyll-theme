@@ -1,66 +1,63 @@
 title:            Tech Blog
-description:      Describe your website here.
+description:      Study note of Software Engineer
 
-# put your disqus here
-disqus_shortname:
+#disqus
+disqus: True
+disqus_shortname: https-sujin729-github-io-infinityandbeyound729
 reading_time:     true # if true, shows the estimated reading time for a post
 words_per_minute: 200
 logo:             images/logo.png # logo visible in the topbar
 excerpt_separator: <!--more-->
-# Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
-# When testing locally leave blank or use http://localhost:4000
 
-url: http://aronbordin.com/neo-hpstr-jekyll-theme
+#site domain
+url: https://sujin729.github.io/infinityandbeyound729/
 
-# draw your top menu here
+# menu
 # each item must have a title and a url.
 #   To list post categories. use type: 'categories'
 #   To create sub categories. add a submenu item
-# See the example
 menu:
   - title: 'Home'
     url: '/'
-  - title: 'Fork'
-    url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme'
-  - title: 'Install'
-    url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme#installation'
+  - title: 'About'
+    url: '/about'
   - title: 'Tags'
     url: '/tags'
   - title: 'Categories'
     url: '/categories'
     type: 'categories'
-  - title: 'Favorites'
-    url: '#'
-    submenu:
-      - title: 'Code Highlighter'
-        url: '/intro/code-highlighting-post/'
-      - title: 'Sample Post'
-        url: '/intro/sample-post/'
+#  - title: 'Favorites'
+#    url: '#'
+#    submenu:
+#      - title: 'Code Highlighter'
+#        url: '/intro/code-highlighting-post/'
+#      - title: 'Sample Post'
+#        url: '/intro/sample-post/'
 
 # Owner/author information
 owner:
-  name:           Your name
-  site:           http://aronbordin.com
-  avatar:         images/avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
-  email:          you@email.com
-  # Twitter nick for use in Twitter cards and follow button.
-  twitter: aron_bordin # if no twitter in this config, the twitter follow button will be removed
-  # GitHub nick for use in follow button in author block.
-  github: aron-bordin
+  name:           Sujin Lee
+  site:           https://github.com/sujin729
+#  avatar:         images/avatar.jpg
+#  bio:            "Work as a Software Engineer & Major in Computer Sicence"
+#  email:          iamsj729@gmail.com
+#  # Twitter nick for use in Twitter cards and follow button.
+#  #twitter: aron_bordin 
+#  # GitHub nick for use in follow button in author block.
+#  github: sujin729
 
 # Twitter account associated with the site if different from owner/author twitter account.
 # Used in Twitter cards.
-twitter:
+# twitter:
 
 # Social networking links used in author block underneath posts. Update and remove as you like.
-social:
-  - title: "github"
-    url: "https://github.com/aron-bordin"
-  - title: "linkedin"
-    url: "https://br.linkedin.com/in/aronbordin"
-  - title: "youtube"
-    url: "https://www.youtube.com/channel/UCfnSek-9HPWOx5e2pH7VFgg"
+#social:
+#  - title: "github"
+#    url: "https://github.com/sujin729"
+#  - title: "linkedin"
+#    url: "https://br.linkedin.com/in/aronbordin"
+#  - title: "youtube"
+#    url: "https://www.youtube.com/channel/UCfnSek-9HPWOx5e2pH7VFgg"
 
 # Background image to be tiled on all pages
 background:
@@ -72,8 +69,8 @@ google_verify:
 bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
-locale:      en_US
+timezone:    Asia/Seoul
+locale:      KR
 future:      true
 highlighter: rouge
 markdown:    kramdown
@@ -81,14 +78,14 @@ sass:
   sass_dir: _sass
   style: compressed
 
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title/
+# https://jekyllrb-ko.github.io/docs/permalinks/
+permalink:   /:categories/:year/:month/:day/:title/
 
 # Amount of post to show on home page
-paginate: 5
+paginate: 3
 
 # if true, shows the floatting share buttons
-float_share: true
+#float_share: true
 
 # Octopress
 # Default extensions
@@ -97,7 +94,7 @@ page_ext: md
 # Found in _templates/
 post_layout: post
 page_layout: page
-# Format titles with titlecase?
+# Format titles with titlecase
 titlecase: true
 
 include: [".htaccess"]
