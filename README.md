@@ -1,6 +1,6 @@
-# LEE SU JIN - TECH BLOG
-This Blog is Study note of Sujin Lee  
-The main language of the blog is Korean  
+# MG - TECH BLOG
+This Blog is Study note of MG  
+The main language of the blog is English  
 
 Mighty Genius!  
 
