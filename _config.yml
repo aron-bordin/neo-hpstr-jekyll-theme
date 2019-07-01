@@ -3,14 +3,14 @@ description:      Study note of Software Engineer
 
 #disqus
 disqus: True
-disqus_shortname: https-sujin729-github-io-infinityandbeyound729
+disqus_shortname: https-sujin729-github-io-infinityandbeyound729-1
 reading_time:     true # if true, shows the estimated reading time for a post
 words_per_minute: 200
 logo:             images/logo.png # logo visible in the topbar
 excerpt_separator: <!--more-->
 
 #site domain
-url: https://sujin729.github.io/infinityandbeyound729/
+url: https://mg729.github.io/
 
 # menu
 # each item must have a title and a url.
@@ -36,15 +36,15 @@ menu:
 
 # Owner/author information
 owner:
-  name:           Sujin Lee
-  site:           https://github.com/sujin729
+  name:           MG
+  site:           https://github.com/mg729
 #  avatar:         images/avatar.jpg
 #  bio:            "Work as a Software Engineer & Major in Computer Sicence"
-#  email:          iamsj729@gmail.com
+#  email:          iammg729@gmail.com
 #  # Twitter nick for use in Twitter cards and follow button.
 #  #twitter: aron_bordin 
 #  # GitHub nick for use in follow button in author block.
-#  github: sujin729
+#  github: mg729
 
 # Twitter account associated with the site if different from owner/author twitter account.
 # Used in Twitter cards.
@@ -53,7 +53,7 @@ owner:
 # Social networking links used in author block underneath posts. Update and remove as you like.
 #social:
 #  - title: "github"
-#    url: "https://github.com/sujin729"
+#    url: "https://github.com/mg729"
 #  - title: "linkedin"
 #    url: "https://br.linkedin.com/in/aronbordin"
 #  - title: "youtube"
@@ -69,8 +69,8 @@ google_verify:
 bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Asia/Seoul
-locale:      KR
+timezone:    America/New_York
+locale:      en_US
 future:      true
 highlighter: rouge
 markdown:    kramdown
