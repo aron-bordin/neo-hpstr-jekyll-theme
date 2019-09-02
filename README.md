@@ -1,8 +1,6 @@
 # MG - TECH BLOG
 This Blog is Study note of MG  
-The main language of the blog is English  
 
-Mighty Genius!  
 
 ## Contents
 
