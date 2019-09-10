@@ -1,5 +1,7 @@
 # MG - TECH BLOG
-This Blog is Study note of MG  
+This Tech Blog is Study note of MG
+per ardua ad astra
+To Infinity and Beyond
 
 
 ## Contents
@@ -8,7 +10,7 @@ This Blog is Study note of MG
 - [Algorithm](#Algorithm)
 - [Git](#Git)
 - [Network](#Network)
-- [License] (#License)
+- [License](#License)
 
 ## C++
 
