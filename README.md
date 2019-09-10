@@ -1,7 +1,7 @@
 # MG - TECH BLOG
-This Tech Blog is Study note of MG
-per ardua ad astra
-To Infinity and Beyond
+This Tech Blog is Study note of MG.
+per ardua ad astra.
+To Infinity and Beyond.
 
 
 ## Contents
