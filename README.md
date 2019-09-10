@@ -5,45 +5,19 @@ This Blog is Study note of MG
 ## Contents
 
 - [C++](#C++)
+- [Algorithm](#Algorithm)
 - [Git](#Git)
 - [Network](#Network)
-- [License](#License)
-
+- [License] (#License)
 
 ## C++
 
-### C++ Programming Basic
-
-0. Introduction
-1. C and C++
-2. Object Oriented Programming `Copy Constructor`
-3. Inheritance
-4. Overloading
-5. STL
-6. Exception
-7. ETC
-
-
-### C++ Programming Intermediate
-
-1. C++11/14/17
-2. rvalue 
-3. move semantics
-4. Perfect forwarding
-5. Lamda Expression
-
-
-### C++ Programming Advanced
-
 *will be updated soon*
 
-### Effectve C++
+## Algorithm
 
-*will be updated soon*
-
-### Effective Modern C++
-
-*will be updated soon*
+* BOJ(BAEKJOON ONLINE JUDGE)
+* 단계별로풀어보기(2019.09~)
 
 ## Git
 
@@ -52,8 +26,7 @@ This Blog is Study note of MG
 
 
 ## Network
-
-Here are some topics about Network will be updated soon :)
+*will be updated soon*:)
 
 
 ## License
