@@ -21,9 +21,9 @@ menu:
   - title: 'Home'
     url: '/'
   - title: 'Fork'
-    url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme'
+    url: 'https://github.com/qf9ar8nv/qf9ar8nv.github.io'
   - title: 'Install'
-    url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme#installation'
+    url: 'https://github.com/qf9ar8nv/qf9ar8nv.github.io'
   - title: 'Tags'
     url: '/tags'
   - title: 'Categories'
@@ -39,11 +39,11 @@ menu:
 
 # Owner/author information
 owner:
-  name:           Your name
-  site:           http://aronbordin.com
+  name:           HyeonCheol Cha
+  site:           https://github.com/qf9ar8nv/qf9ar8nv.github.io
   avatar:         images/avatar.jpg
   bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
-  email:          you@email.com
+  email:          ckguscjf0@gmail.com
   # Twitter nick for use in Twitter cards and follow button.
   twitter: aron_bordin # if no twitter in this config, the twitter follow button will be removed
   # GitHub nick for use in follow button in author block.
@@ -56,11 +56,11 @@ twitter:
 # Social networking links used in author block underneath posts. Update and remove as you like.
 social:
   - title: "github"
-    url: "https://github.com/aron-bordin"
+    url: "https://github.com/qf9ar8nv/qf9ar8nv.github.io"
   - title: "linkedin"
-    url: "https://br.linkedin.com/in/aronbordin"
+    url: "https://github.com/qf9ar8nv/qf9ar8nv.github.io"
   - title: "youtube"
-    url: "https://www.youtube.com/channel/UCfnSek-9HPWOx5e2pH7VFgg"
+    url: "https://github.com/qf9ar8nv/qf9ar8nv.github.io"
 
 # Background image to be tiled on all pages
 background:
