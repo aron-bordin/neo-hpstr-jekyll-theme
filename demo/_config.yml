@@ -10,7 +10,7 @@ excerpt_separator: <!--more-->
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
 
-url: https://github.com/qf9ar8nv/qf9ar8nv.github.io
+url: http://aronbordin.com/neo-hpstr-jekyll-theme
 
 # draw your top menu here
 # each item must have a title and a url.
@@ -20,6 +20,10 @@ url: https://github.com/qf9ar8nv/qf9ar8nv.github.io
 menu:
   - title: 'Home'
     url: '/'
+  - title: 'Fork'
+    url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme'
+  - title: 'Install'
+    url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme#installation'
   - title: 'Tags'
     url: '/tags'
   - title: 'Categories'
@@ -35,11 +39,11 @@ menu:
 
 # Owner/author information
 owner:
-  name:           HyeonCheol Cha
-  site:           https://github.com/qf9ar8nv/qf9ar8nv.github.io
+  name:           Your name
+  site:           http://aronbordin.com
   avatar:         images/avatar.jpg
   bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
-  email:          ckguscjf0@gmail.com
+  email:          you@email.com
   # Twitter nick for use in Twitter cards and follow button.
   twitter: aron_bordin # if no twitter in this config, the twitter follow button will be removed
   # GitHub nick for use in follow button in author block.
@@ -52,11 +56,11 @@ twitter:
 # Social networking links used in author block underneath posts. Update and remove as you like.
 social:
   - title: "github"
-    url: "https://github.com/qf9ar8nv/qf9ar8nv.github.io"
+    url: "https://github.com/aron-bordin"
   - title: "linkedin"
-    url: "https://github.com/qf9ar8nv/qf9ar8nv.github.io"
+    url: "https://br.linkedin.com/in/aronbordin"
   - title: "youtube"
-    url: "https://github.com/qf9ar8nv/qf9ar8nv.github.io"
+    url: "https://www.youtube.com/channel/UCfnSek-9HPWOx5e2pH7VFgg"
 
 # Background image to be tiled on all pages
 background:
@@ -84,7 +88,7 @@ permalink:   /:categories/:title/
 paginate: 5
 
 # if true, shows the floatting share buttons
-float_share: false
+float_share: true
 
 # Octopress
 # Default extensions
@@ -97,6 +101,6 @@ page_layout: page
 titlecase: true
 
 include: [".htaccess"]
-exclude: ["demo/*", "lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
 gems: [jekyll-paginate]
 theme: neo-hpstr-jekyll-theme
