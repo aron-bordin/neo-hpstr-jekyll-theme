@@ -1,38 +1,35 @@
-<!doctype html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
-<head>
-{% include head.html %}
-</head>
+---
+layout: default
+---
 
-<body id="page">
+<article {% if page.feature-img %}class="feature-image"{% endif %}>
 
-{% include browser-upgrade.html %}
-{% include header.html %}
+  <header id="main" style="background-image: url('{{ page.feature-img | relative_url }}')">
+    <div class="title-padder">
+      {% if page.hide_title %}
+        <div class="feature-image-padding"></div>
+      {% else %}
+        <h1 id="{{ page.title | default: "" | cgi_escape }}" class="title"> {{ page.title }}</h1>
+        {% if page.subtitle %}
+        <h2 class="subtitle">{{ page.subtitle }}</h2>
+        {% endif %}
+      {% endif %}
+    </div>
+  </header>
 
-<div id="main" role="main">
-  <article class="hentry">
-    <div class="entry-content">
-      {{ content }}
-      <footer class="entry-meta">
-        {% if page.modified %}<span>Updated on <span class="entry-date date published updated"><time datetime="{{ page.modified }}">{{ page.modified | date: "%B %d, %Y" }}</time></span></span>
-        <span class="author vcard"><span class="fn">{{ site.owner.name }}</span></span>{% endif %}
-        {% if page.share != false %}{% include social-share.html %}{% endif %}
-      </footer>
-    </div><!-- /.entry-content -->
-    {% if page.comments != false and site.disqus_shortname %}<section id="disqus_thread"></section><!-- /#disqus_thread -->{% endif %}
-  </article>
-</div><!-- /#main -->
+  <section class="post-content">
+  {% if page.bootstrap %}
+  <div class="bootstrap-iso">
+  {% endif %}
+	{{ content }}
+  {% if page.bootstrap %}
+  </div>
+  {% endif %}
+  </section>
 
-{% include scripts.html %}
 
-<div class="footer-wrapper">
-  <footer role="contentinfo">
-    {% include footer.html %}
-  </footer>
-</div><!-- /.footer-wrapper -->
+  <!-- Tag list for portfolio -->
+  {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %}
+  {% include default/tags_list.html tags=tag_list %}
 
-</body>
-</html>
+</article>

@@ -1,0 +1,35 @@
+.site-footer {
+  @extend %padding-post;
+  z-index: -1;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  color: var(--meta);
+  font-size: 0.9em;
+
+  .footer-icons {
+    ul {
+      list-style: none;
+      margin: 0;
+
+      li {
+        display: inline;
+      }
+
+      a {
+        color: var(--link);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        a {
+          color: var(--meta);
+        }
+      }
+
+      a:hover {
+        color: var(--link);
+        filter: brightness(0.85);
+      }
+    }
+  }
+}

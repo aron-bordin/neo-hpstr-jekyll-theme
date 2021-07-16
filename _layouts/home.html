@@ -1,28 +1,14 @@
-<!doctype html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
-<head>
-{% include head.html %}
-</head>
+---
+layout: default
+---
 
-<body id="post-index">
+<div class="home">
 
-{% include browser-upgrade.html %}
-{% include header.html %}
+    <div id="main" class="call-out"
+         style="background-image: url('{{ site.header_feature_image | relative_url }}')">
+        <h1> {{ site.header_text | default: "Change <code>header_text</code> in <code>_config.yml</code>"}} </h1>
+    </div>
 
-<div id="main" role="main">
-  {{ content }}
-</div><!-- /#main -->
+    {% include blog/blog.html %}
 
-{% include scripts.html %}
-
-<div class="footer-wrapper">
-  <footer role="contentinfo">
-    {% include footer.html %}
-  </footer>
-</div><!-- /.footer-wrapper -->
-
-</body>
-</html>
+</div>
